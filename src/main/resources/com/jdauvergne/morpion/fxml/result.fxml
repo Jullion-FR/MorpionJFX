@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane onMouseEntered="#setNormalOpacity" onMouseExited="#setLowOpacity" opacity="0.85" prefHeight="134.0" prefWidth="363.0" style="-fx-background-color: #60ffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdauvergne.morpion.controllers.ResultController">
+   <children>
+      <VBox alignment="CENTER" layoutX="94.0" prefHeight="146.0" prefWidth="175.0" spacing="10" style="-fx-background-color: #A0ffff;">
+          <Button fx:id="replayButton" onAction="#handleReplay" style="-fx-background-color: green; -fx-border-color: black;" text="ReJouer" textFill="WHITE" />
+          <Button onAction="#handleChangeName" style="-fx-background-color: Grey; -fx-border-color: black;" text="Changer un nom" textFill="WHITE" />
+          <Button onAction="#handleQuit" style="-fx-background-color: pink; -fx-border-color: black;" text="Fermer l'application" />
+      </VBox>
+      <ImageView fx:id="imagePlayer1" fitHeight="64.0" fitWidth="63.0" layoutX="14.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/cross.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagePlayer2" fitHeight="64.0" fitWidth="63.0" layoutX="286.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/circle.png" />
+         </image>
+      </ImageView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

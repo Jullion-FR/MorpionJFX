@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane prefHeight="112.0" prefWidth="572.0" style="-fx-background-color: #E6E6FA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdauvergne.morpion.controllers.ColorController">
+   <children>
+      <Label fx:id="backLabel" layoutX="95.0" layoutY="25.0" style="-fx-background-color: white; -fx-border-color: black;" text="Fond">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="foreLabel" layoutX="438.0" layoutY="25.0" style="-fx-background-color: white; -fx-border-color: black;" text="Texte">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <ColorPicker layoutX="29.0" layoutY="67.0" onAction="#setBackgroundColor" />
+      <ColorPicker layoutX="375.0" layoutY="67.0" onAction="#setForegroundColor">
+         <value>
+            <Color />
+         </value></ColorPicker>
+      <ChoiceBox fx:id="playerChoiceBox" layoutX="211.0" layoutY="14.0" prefWidth="150.0" />
+      <Button layoutX="536.0" layoutY="6.0" mnemonicParsing="false" onAction="#onExit" style="-fx-background-color: red; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 15;" text="X" textFill="WHITE" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="66.0" mnemonicParsing="false" onAction="#confirmColor" prefHeight="16.0" prefWidth="53.0" style="-fx-background-color: Green; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 15;" text="✓" textFill="WHITE" />
+   </children>
+</AnchorPane>
